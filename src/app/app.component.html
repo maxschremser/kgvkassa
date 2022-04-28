@@ -3,20 +3,24 @@
 </mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav opened mode="side" position="end">
-    <h3>Summe {{kassa.summe}}</h3>
-    <p *ngFor="let o of kassa.order">{{o.name}}</p>
+    <mat-grid-list cols="1">
+      <mat-grid-tile-header>
+        <a mat-button (mousedown)="kassa.order = [];" color="warn" class="matSumButton">Summe {{kassa.summe}}</a>
+      </mat-grid-tile-header>
+      <p *ngFor="let o of kassa.order">{{o.name}}</p>
+    </mat-grid-list>
   </mat-sidenav>
-    <section>
+  <section>
 
     <mat-tab-group>
       <mat-tab label="Getränke">
         <app-button-grid category="drinks"></app-button-grid>
       </mat-tab>
       <mat-tab label="Speisen">
-        <app-button-grid category="food"></app-button-grid>
+        <app-button-grid category="food" #food></app-button-grid>
       </mat-tab>
       <mat-tab label="Kaffee">
-        <app-button-grid category="kaffee"></app-button-grid>
+        <app-button-grid category="kaffee" #kaffee></app-button-grid>
       </mat-tab>
     </mat-tab-group>
   </section>

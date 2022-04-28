@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {KassaService} from "./kassa.service";
+import {MatTabChangeEvent} from "@angular/material/tabs";
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,5 @@ export class AppComponent {
 
   constructor(public kassa: KassaService) {
   }
+
 }

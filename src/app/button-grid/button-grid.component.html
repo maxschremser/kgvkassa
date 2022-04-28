@@ -1,5 +1,17 @@
-<mat-grid-list cols="3" rowHeight="2:2" gutterSize="3">
+<!--
+<mat-grid-list cols="3">
   <mat-grid-tile *ngFor="let d of data(category)">
-    <a mat-button mat-raised-button color="primary" (click)="add(d)">{{d.name}}</a>
+    <a mat-flat-button color="primary" class="mat-raised-button" (click)="add(d)">
+      <p></p>
+      <h1>{{d.name}}</h1>
+      <small>€ {{d.preis | number: "1.2" }}</small>
+    </a>
   </mat-grid-tile>
 </mat-grid-list>
+-->
+
+<a mat-flat-button color="primary" *ngFor="let d of data(category)" class="mat-raised-button" (click)="add(d)">
+  <p></p>
+  <h1>{{d.name}}</h1>
+  <small>€ {{d.preis | number: "1.2" }}</small>
+</a>

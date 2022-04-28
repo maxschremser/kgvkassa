@@ -19,7 +19,7 @@ export class KassaService {
   }
 
   get drinks() {
-    return [{name: "1/8", preis: 2.5}, {name: "Schnaps", preis: 2}, {name: "Überschwemmung", preis: 3.5}];
+    return [{name: "1/8", preis: 2.2}, {name: "Schnaps", preis: 2}, {name: "Überschwemmung", preis: 3.5}];
   }
 
   get food() {
@@ -38,7 +38,7 @@ export class KassaService {
     for (let o of this.order) {
       summe += o.preis;
     }
-    return summe;
+    return summe.toFixed(2);
   }
 }
 
