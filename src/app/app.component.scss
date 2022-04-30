@@ -1,6 +1,6 @@
 mat-sidenav {
   width: 400px;
-  height: 100%;
+  height: 100% !important;
 }
 .matSumButton {
   font-size: 44px !important;
@@ -10,4 +10,8 @@ mat-sidenav {
 .mat-grid-tile-header {
   padding-top: 100px !important;
   height: 100px !important;
+}
+
+::ng-deep .mat-sidenav-container{
+  height: 100vh !important;
 }

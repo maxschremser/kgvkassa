@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -6,31 +7,26 @@ import {Injectable} from '@angular/core';
 export class KassaService {
 
   order: Position[] = [];
+  data: any = {};
 
-  constructor() {
+  constructor(public http: HttpClient) {
+    http.get<Position[]>("assets/data.json").subscribe(data => this.data = data);
   }
 
   add(pos: Position) {
     this.order.push(pos);
   }
 
-  get data() {
-    return {"drinks": this.drinks, food: this.food, kaffee: this.kaffee};
-  }
-
   get drinks() {
-    return [{name: "1/8", preis: 2.2}, {name: "Schnaps", preis: 2}, {name: "Überschwemmung", preis: 3.5}];
+    return this.data.drinks;
   }
 
   get food() {
-    return [new Position("Weisswürstel", 2.5), {name: "Leberkäse", preis: 1.5}, {
-      name: "Currywurst",
-      preis: 2.5
-    }, {name: "Wurstbrot", preis: 2.5}, {name: "Käsebrot", preis: 1.5}];
+    return this.data.food;
   }
 
   get kaffee() {
-    return [{name: "Kaffee", preis: 2}, {name: "Kuchen", preis: 1}];
+    return this.data.kaffee;
   }
 
   get summe() {

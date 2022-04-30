@@ -1,0 +1,56 @@
+{
+  "drinks": [
+    {
+      "name": "Bier",
+      "preis": 2.5
+    },
+    {
+      "name": "Limo",
+      "preis": 2.8
+    },
+    {
+      "name": "Mineral",
+      "preis": 1.5
+    },
+    {
+      "name": "1/8 W",
+      "preis": 2.2
+    },
+    {
+      "name": "G'Spritzter",
+      "preis": 2.2
+    },
+    {
+      "name": "Schnaps",
+      "preis": 1.5
+    }
+  ],
+  "food": [
+    {
+      "name": "Pleskaviza",
+      "preis": 6.5
+    },
+    {
+      "name": "Kotelett",
+      "preis": 6.8
+    },
+    {
+      "name": "Bratwürstel",
+      "preis": 2.5
+    }
+  ],
+  "kaffee": [
+    {
+      "name": "Kaffee",
+      "preis": 2.2
+    },
+    {
+      "name": "Kuchen",
+      "preis": 2.6
+    },
+    {
+      "name": "Torte",
+      "preis": 3.2
+    }
+  ]
+}

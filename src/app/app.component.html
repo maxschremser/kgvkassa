@@ -1,6 +1,6 @@
-<mat-toolbar>
+<!--mat-toolbar>
   <span>ÖKGV - Kassasystem</span>
-</mat-toolbar>
+</mat-toolbar-->
 <mat-sidenav-container>
   <mat-sidenav opened mode="side" position="end">
     <mat-grid-list cols="1">
@@ -10,18 +10,16 @@
       <p *ngFor="let o of kassa.order">{{o.name}}</p>
     </mat-grid-list>
   </mat-sidenav>
-  <section>
-
     <mat-tab-group>
       <mat-tab label="Getränke">
         <app-button-grid category="drinks"></app-button-grid>
       </mat-tab>
       <mat-tab label="Speisen">
-        <app-button-grid category="food" #food></app-button-grid>
+        <app-button-grid category="food"></app-button-grid>
       </mat-tab>
       <mat-tab label="Kaffee">
-        <app-button-grid category="kaffee" #kaffee></app-button-grid>
+        <app-button-grid category="kaffee"></app-button-grid>
       </mat-tab>
     </mat-tab-group>
-  </section>
+
 </mat-sidenav-container>
